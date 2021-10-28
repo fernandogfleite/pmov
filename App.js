@@ -10,8 +10,8 @@ export default function App() {
     if (button == 'C'){
       setScreenValue('0')
     }
-    if (button == '='){
-      setScreenValue(eval(screenValue.replace('X', '*')))
+    else if (button == '=' ){
+      setScreenValue(eval(screenValue.replace('X', '*')).toString())
     }
     else if (screenValue.length < 8){
       if (screenValue == '0'){
@@ -44,8 +44,8 @@ export default function App() {
         <TouchableOpacity style={styles.buttons} onPress={()=>{pressButton('9')}}>
           <Text style={styles.buttonText}>9</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#DC7633'}]} onPress={()=>{pressButtonOperation('X')}}>
-          <Text style={[styles.buttonText, {fontSize: 30}]}>X</Text>
+        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#00537A'}]} onPress={()=>{pressButtonOperation('X')}}>
+          <Text style={[styles.buttonText, {fontSize: 30, color: 'white'}]}>X</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.buttonContainer}>
@@ -58,8 +58,8 @@ export default function App() {
         <TouchableOpacity style={styles.buttons} onPress={()=>{pressButton('6')}}>
           <Text style={styles.buttonText}>6</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#DC7633'}]} onPress={()=>{pressButtonOperation('-')}}>
-          <Text style={[styles.buttonText, {fontSize: 30}]}>-</Text>
+        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#00537A'}]} onPress={()=>{pressButtonOperation('-')}}>
+          <Text style={[styles.buttonText, {fontSize: 30, color: 'white'}]}>-</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.buttonContainer}>
@@ -72,8 +72,8 @@ export default function App() {
         <TouchableOpacity style={styles.buttons} onPress={()=>{pressButton('3')}}>
           <Text style={styles.buttonText}>3</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#DC7633'}]} onPress={()=>{pressButtonOperation('+')}}>
-          <Text style={[styles.buttonText, {fontSize: 30}]}>+</Text>
+        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#00537A'}]} onPress={()=>{pressButtonOperation('+')}}>
+          <Text style={[styles.buttonText, {fontSize: 30, color: 'white'}]}>+</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.buttonContainer}>
@@ -86,13 +86,13 @@ export default function App() {
         <TouchableOpacity style={styles.buttons} onPress={()=>{pressButton('C')}}>
           <Text style={styles.buttonText}>C</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#DC7633'}]} onPress={()=>{pressButtonOperation('/')}}>
-          <Text style={[styles.buttonText, {fontSize: 30}]}>/</Text>
+        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#00537A'}]} onPress={()=>{pressButtonOperation('/')}}>
+          <Text style={[styles.buttonText, {fontSize: 30, color: 'white'}]}>/</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#DC7633', width: 375}]} onPress={()=>{pressButton('=')}}>
-          <Text style={[styles.buttonText, {fontSize: 30}]}>=</Text>
+        <TouchableOpacity style={[styles.buttons, {backgroundColor: '#00537A', width: 375}]} onPress={()=>{pressButton('=')}}>
+          <Text style={[styles.buttonText, {fontSize: 30, color: 'white'}]}>=</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     margin: 12
   },
   buttons:{
-    backgroundColor: 'gray',
+    backgroundColor: '#E3DFFF',
     padding: 22,
     width: 80,
     alignItems: 'center',
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     borderRadius: 50
   },
   buttonText:{
-    color: 'white',
+    color: 'black',
     fontSize: 25,
     fontWeight: 'bold'
   },
